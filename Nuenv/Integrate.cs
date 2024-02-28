@@ -11,7 +11,7 @@ public static class Integrate
         double sum = 0.0;
 
         for (int i = 0; i < size; i++)
-            sum += 0.5 * (x[i + 1] - x[1]) * (y[i] + y[i + 1]);
+            sum += 0.5 * (x[i + 1] - x[i]) * (y[i] + y[i + 1]);
         
         return sum;
     }

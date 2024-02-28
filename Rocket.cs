@@ -36,7 +36,7 @@ public class Rocket
     }
 
     public double CalculateMassFlow(double t)
-        => Interp1D.Linear(TimeData, MassFlowData, t); 
+        => t > TimeData[^1] ? DryMass : Interp1D.Linear(TimeData, MassFlowData, t); 
     
     public static double CalculateWeight(double h, double m)
         => -1.0 * m * Gravity.GetGravity(h);
@@ -51,10 +51,8 @@ public class Rocket
     } 
 
     public double CalculateThrust(double t)
-    {
-        return CalculateMassFlow(t) * Ve;
-    }
-
+        => t > TimeData[^1] ? 0.0 : CalculateMassFlow(t) * Ve;
+    
     public double MomentumEq(double t)
     {
         var thrust = CalculateThrust(t);
