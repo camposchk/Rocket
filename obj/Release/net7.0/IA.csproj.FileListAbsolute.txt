@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\IA\Rocket\bin\Release\net7.0\IA.exe
+C:\Users\disrct\Desktop\IA\Rocket\bin\Release\net7.0\IA.deps.json
+C:\Users\disrct\Desktop\IA\Rocket\bin\Release\net7.0\IA.runtimeconfig.json
+C:\Users\disrct\Desktop\IA\Rocket\bin\Release\net7.0\IA.dll
+C:\Users\disrct\Desktop\IA\Rocket\bin\Release\net7.0\IA.pdb
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.csproj.AssemblyReference.cache
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.AssemblyInfo.cs
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.dll
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\refint\IA.dll
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.pdb
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\IA.genruntimeconfig.cache
+C:\Users\disrct\Desktop\IA\Rocket\obj\Release\net7.0\ref\IA.dll

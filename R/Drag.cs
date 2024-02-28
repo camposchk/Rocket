@@ -4,7 +4,7 @@ namespace AIContinuous.Rocket;
 
 public static class Drag
 {
-    private const           double   RStar     = 287.052874;
+    private const double RStar = 287.052874;
     private static readonly double[] TempData  = { -15.0, 0.0, 20.0, 100.0, 200.0, 400.0, 1000.0 };
     private static readonly double[] GammaData = { 1.404, 1.403, 1.400, 1.401, 1.398, 1.393, 1.365 };
 
