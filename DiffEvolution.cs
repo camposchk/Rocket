@@ -53,8 +53,7 @@ public class DiffEvolution
 
             IndividualsRestrictions[i] = Restriction(Individuals[i]);
 
-            if(IndividualsRestrictions[i] <= 0.0)
-                IndividualsFitness[i] = Fitness(Individuals[i]);
+            IndividualsFitness[i] = IndividualsRestrictions[i] <= 0.0 ? Fitness(Individuals[i]) : double.MaxValue;
         }
     }
 
@@ -64,16 +63,24 @@ public class DiffEvolution
         
         for (int i = 0; i < NPop; i++)
         {
-            var fitnessCurrent = Fitness(Individuals[i]);
 
-            if (fitnessCurrent < fitnessBest)
+            if (IndividualsFitness[i] < fitnessBest)
             {
                 BestIndividualIndex = i;
-                fitnessBest = fitnessCurrent;
+                fitnessBest = IndividualsFitness[i];
             }
         }
 
         IndividualsFitness[BestIndividualIndex] = fitnessBest;
+    }
+
+    private void ensureBounds(double[] individual)
+    {
+        for (int i = 0; i < Dimension; i++)
+        {
+            if (individual[i] < Bounds[i][0] || individual[i] > Bounds[i][1])
+                individual[i] = Utils.Rescale(Random.Shared.NextDouble(), Bounds[i][0], Bounds[i][1]);
+        }
     }
 
     private double[] Mutate(int index)
@@ -105,6 +112,8 @@ public class DiffEvolution
             if (Random.Shared.NextDouble() > Recombination && i != Random.Shared.Next(Dimension))
                 trial2[i] = trial[i];
         }
+
+        ensureBounds(trial2);
 
         return trial2;
     }
