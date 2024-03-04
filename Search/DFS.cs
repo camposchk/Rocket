@@ -11,10 +11,8 @@ public static partial class Search
         
         foreach (var currNode in node.Children)
         {
-            if(EqualityComparer<T>.Default.Equals(currNode.Value, goal))
+            if(DFSearch(currNode, goal))
                 return true;
-            
-            DFSearch(currNode, goal);
         }
 
         return false;

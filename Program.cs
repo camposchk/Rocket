@@ -3,6 +3,10 @@ using AIContinuous.Search;
 
 var tree = BuildTree();
 Console.WriteLine(tree);
+
+var found = Search.BFSearch(tree.Root, 99);
+Console.WriteLine($"Goal found: {found}");
+
 return;
 
 Tree<int> BuildTree()
@@ -48,3 +52,4 @@ Tree<int> BuildTree()
 
     return tree5;
 }
+
